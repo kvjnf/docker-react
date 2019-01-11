@@ -1,14 +1,12 @@
 sudo: required
 services:
-  - docker
-
+- docker
 before_install:
-  - docker build -t kvjnf/docker-react -f Dockerfile.dev .
-
+- docker build -t kvjnf/docker-react -f Dockerfile.dev .
 script:
-  - docker run kvjnf/docker-react npm run test -- --coverage
-
-# notifications:
-#   email: false
-#   slack:
-#     secure: secure: "LGVZJX7CJlGUT5tXxcklxwVz0B9IuMqJTPnvBrsZWnYYhIe5OXNX93Z9qq/9pPd5JqGHgKXOytZ2iQrrcUkhxvYoWWzrjBaDqAhKXZTXOPDBnz4ASodt5ZIQUBHKXILqWnFDME/U0uVdqsGmRZ46qKnR75PIytKLfqabHcMzWqIK5BatKfDb8aa6uRGEkMjgr3SU4gDzOmt3S8D2p1+lbmjHMeU7Pq2Uh8awZzsQCV+ws0FB1RRFdFSb9Zq6ApTcQZ8Jw9yTRVE1Td1WChKZGo9MvU+bNXq7i00LxQDChYugpBVCEf8gYDERkTN4INP3tvV9WZzxDT+Zy+z9lf7qeDGeBjogPSVfaK2fm7rZRZBgho2LKF5DJQh5VgAaJdCT9obJWy8s9uE3iVbOmUXN9HYVfT39UBw2PiLshwJhu7bgCUNayyqjtVVFXodg7d4q02kgiIo2Mb4Ys//XRnrBrUbKibhDSTIMJmYVbsI4o7RRdmmFuHOvM2M12BwxLxhKoIqQQpii8FQ2sv+TvDxgz7YTtPD492JRkKKnbzFWCIthvOrXayEvZRb/ZuKf2fTju29kltKJYgeg2eYrCqYhrxCyQsM/F4PsHppCIPMCgIPPNaZjrKPuijqk3/uuQ89r95XXEeYEvt6rMS6Am/Poo6O3zuTn+jGMr0Ca/P9vrNk="
+- docker run kvjnf/docker-react npm run test -- --coverage
+notifications:
+  email: false
+  slack:
+    rooms:
+      secure: VX9DPOQhymVKV7O0nSrztxpqcMzd63AuItV1u82funEWD9+GUqlsD65MI5nuE7KEOuHfvEds5DPR41+u7WG0vRlSIJWT6hwIwLGoKRiKk3p8Tkey9zmLGDxzKpCjsajV38LdwffZcRKCLOMzW30HiIaF/LAmIV7L8b77luOmX+GG+PVDpKf3zyhEeyaq6i1oBuVaoz1H2uFDCHBGClYAmU1aKpfMT/mF8QzqYNwmkO4ZgqP9VpzILSeF3VfU/+HewLx/UvwotIFs5tbDIjE5lGR68+knADqTeUXqQWHaokHyFZb73eXcM0cfEfTRwQjtbaHCTNE7nTHq9KlyE5eeiirA7L54RMUadmN1HNvr8Ju4TTZAGaVXecTrH0q9YwakL1yJEYKRsf3LKBemzv1dKzs1/gtl2+oYCC+Wv+ktff1w5s7E60BTNOrZtVmL7Er2LJjqeyef1wgp+QZSNBiilEGdnBjrTEy+OxizQQSZsYRlmwf/qn3Q6jwmLo3qGxKGbiBtiooij0WcERbfCQk5IbaykHteUmAEMa7ZqY4PngbTzWM+6zZyHfHgoX4r6FBG/F1AaWoBa4LRlv2nfcyGtCvU+LcLPsmj1QXqcdfXGcQa0u9FMapptAAQR8KEvJrruILIFzsITjUL0B4J+HfdrcbKPIfHhSHY7rlc6CgAEz4=
