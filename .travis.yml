@@ -10,3 +10,16 @@ notifications:
   slack:
     rooms:
       secure: VX9DPOQhymVKV7O0nSrztxpqcMzd63AuItV1u82funEWD9+GUqlsD65MI5nuE7KEOuHfvEds5DPR41+u7WG0vRlSIJWT6hwIwLGoKRiKk3p8Tkey9zmLGDxzKpCjsajV38LdwffZcRKCLOMzW30HiIaF/LAmIV7L8b77luOmX+GG+PVDpKf3zyhEeyaq6i1oBuVaoz1H2uFDCHBGClYAmU1aKpfMT/mF8QzqYNwmkO4ZgqP9VpzILSeF3VfU/+HewLx/UvwotIFs5tbDIjE5lGR68+knADqTeUXqQWHaokHyFZb73eXcM0cfEfTRwQjtbaHCTNE7nTHq9KlyE5eeiirA7L54RMUadmN1HNvr8Ju4TTZAGaVXecTrH0q9YwakL1yJEYKRsf3LKBemzv1dKzs1/gtl2+oYCC+Wv+ktff1w5s7E60BTNOrZtVmL7Er2LJjqeyef1wgp+QZSNBiilEGdnBjrTEy+OxizQQSZsYRlmwf/qn3Q6jwmLo3qGxKGbiBtiooij0WcERbfCQk5IbaykHteUmAEMa7ZqY4PngbTzWM+6zZyHfHgoX4r6FBG/F1AaWoBa4LRlv2nfcyGtCvU+LcLPsmj1QXqcdfXGcQa0u9FMapptAAQR8KEvJrruILIFzsITjUL0B4J+HfdrcbKPIfHhSHY7rlc6CgAEz4=
+
+deploy:
+  provider: elasticbeanstalk
+  region: "eu-central-1"
+  app: "docker-react"
+  env: "DockerReact-env"
+  bucket_name: "elasticbeanstalk-eu-central-1-814045637828"
+  bucket_path: "docker-react"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
